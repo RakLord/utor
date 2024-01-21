@@ -1,0 +1,13 @@
+
+button {
+    border: 1px solid white;
+    background-color: transparent;
+    color: var(--color-text);
+    border-radius: 0.2em;
+    padding: 0.1em 0.4em;
+}
+
+button:hover {
+    background-color: rgba(100,100,100,0.4);
+    border-color: hsl(from color h s 100);
+}

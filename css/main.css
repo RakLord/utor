@@ -1,0 +1,248 @@
+/* Resets end line 130-ish */
+
+:root {
+    --color-text: #ebe9fc;
+    --color-primary: #3a31d8;
+    --color-accent: #0600c2;
+    --color-background: #010104;
+    --color-background-seccondary: #181545ba;
+    --color-seccondary: #020024;
+    --color-danger: #fe5a5a;
+
+    --ff-main: 'Titillium Web', sans-serif;
+ 
+    --pad-primary: 0.8rem;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    animation-duration: 0.1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0,01ms !important;
+    scroll-behavior: auto !important;
+}
+
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+/* Util */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-end {
+    text-align: end;
+}
+
+/* General Styling */
+
+body {
+    font-family: var(--ff-main);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    background: var(--color-background);
+    display: grid;
+    min-height:  100vh;
+    place-items: center;
+
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--ff-extra);
+    line-height: 1.5;
+    color: var(--color-accent);
+}
+
+/* Main */
+
+hr {
+    width: 100%;
+    border: 1px solid var(--color-primary);
+    margin-block: 0.5rem;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+
+}
+
+#header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(255,255,255, 0.1);
+    padding-block: 0.1rem;
+    border-bottom: 1px solid white;
+}
+
+.duo-panes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-block: 0.1rem;
+}
+
+#left-pane {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25%;
+
+    background-color: rgba(255,255,255, 0.1);
+    height: 100%;
+    border-right: 1px solid white;
+}
+
+#right-pane {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    min-width: 75%;
+    background-color: rgba(255,255,255, 0.1);
+    height: 100%;
+}
+
+#character-stats-container {
+    margin-top: 2em;
+    width: 100%;
+    padding-inline: 0.7rem;
+}
+.character-stat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#navigation-pane {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* max items per row is 2 */
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding-block: 0.1rem;    
+}
+
+#navigation-pane > button {
+    width: 45%;
+    margin: 0.1em;
+}
+
+#combat {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    width: 100%;
+    background-color: rgba(255,255,255, 0.01);
+    padding-block: 0.1rem;
+}
+
+.enemy {
+    flex: 1 0 21%;
+    border: 2px solid var(--color-seccondary);
+    border-radius: 0.5em;
+    background-color: var(--color-background-seccondary);
+    padding: 0.4em;
+    margin-inline: 1em;
+    padding-inline: 5%;
+}
+.enemy > img {
+    justify-content: center;
+    margin-inline: auto;
+}
+#enemy-stats-container {
+    margin-top: 2em;
+    width: 100%;
+    padding-inline: 0.7rem;
+}
+.enemy-stat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
